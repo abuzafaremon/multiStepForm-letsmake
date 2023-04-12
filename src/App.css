@@ -25,7 +25,6 @@
 
 .progress span {
   display: block;
-  width: 33.3%;
   height: 100%;
   background: green;
   transition: all .3s linear;

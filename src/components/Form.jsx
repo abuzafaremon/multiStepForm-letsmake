@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import Accounts from "./Accounts";
 import Contacts from "./Contacts";
 import Names from "./Names";
+import Data from "./Data";
 
 const schema = yup.object({
   firstName: yup.string().required("name is required"),
@@ -44,6 +45,7 @@ const schema = yup.object({
 
 const Form = () => {
   const [page, setPage] = useState(0);
+  const [data, setData] = useState([]);
   const FormTitles = ["Personal Info", "Contacts Info", "Accounts Info"];
   const {
     register,
@@ -56,6 +58,7 @@ const Form = () => {
 
   const onSubmit = (data) => {
     console.log(data);
+    setData(data);
     reset();
     setPage(0);
     alert("Your form has been submitted, Check your console");
@@ -64,7 +67,11 @@ const Form = () => {
   return (
     <div className="container">
       <div className="progress">
-        <span></span>
+        <span
+          style={{
+            width: page === 0 ? "33.3%" : page === 1 ? "66.6%" : "100%",
+          }}
+        ></span>
       </div>
       <div className="form">
         <div className="header">
@@ -105,6 +112,7 @@ const Form = () => {
           </form>
         </div>
       </div>
+      <Data data={data} />
     </div>
   );
 };

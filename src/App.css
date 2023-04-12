@@ -1,38 +1,65 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  margin: 50px auto;
+  border: 2px solid gray;
+  padding: 20px;
+  box-shadow: 0 0 10px -2px rgba(0, 0, 0, .5);
+}
+
+.progress {
+  width: 100%;
+  height: 7px;
+  border-radius: 5px;
+  background: lightgray;
+  overflow: hidden;
+  transition: all .3s linear;
+}
+
+.progress span {
+  display: block;
+  width: 33.3%;
+  height: 100%;
+  background: green;
+  transition: all .3s linear;
+}
+
+.header {
   text-align: center;
+  margin: 5px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.footer {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 2px;
 }
 
-.App-link {
-  color: #61dafb;
+.footer button {
+  width: 100%;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  padding: 5px;
+  background: transparent;
+  transition: all .3s linear
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.footer button:hover {
+  background: lightgray;
+  transition: all .3s linear
+}
+
+.body form {
+  display: grid;
+  gap: 5px;
+}
+
+form input {
+  padding: 5px;
 }

@@ -45,7 +45,7 @@ const schema = yup.object({
 
 const Form = () => {
   const [page, setPage] = useState(0);
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(null);
   const FormTitles = ["Personal Info", "Contacts Info", "Accounts Info"];
   const {
     register,
@@ -112,7 +112,7 @@ const Form = () => {
           </form>
         </div>
       </div>
-      <Data data={data} />
+      {data && <Data data={data} />}
     </div>
   );
 };

@@ -4,25 +4,25 @@ const Data = ({ data }) => {
   return (
     <div>
       <p>
-        First Name: <strong>{data.firstName}</strong>
+        <span>First Name:</span> <strong>{data?.firstName}</strong>
       </p>
       <p>
-        Last Name: <strong>{data.lastName}</strong>
+        <span>Last Name:</span> <strong>{data?.lastName}</strong>
       </p>
       <p>
-        Username: <strong>{data.username}</strong>
+        <span>Username:</span> <strong>{data?.username}</strong>
       </p>
       <p>
-        Age: <strong>{data.age}</strong>
+        <span>Age:</span> <strong>{data?.age}</strong>
       </p>
       <p>
-        Contact Email: <strong>{data.contactEmail}</strong>
+        <span>Contact Email:</span> <strong>{data?.contactEmail}</strong>
       </p>
       <p>
-        Phone Number: <strong>{data.phone}</strong>
+        <span>Phone Number:</span> <strong>{data?.phone}</strong>
       </p>
       <p>
-        Facebook: <strong>{data.facebook}</strong>
+        <span>Facebook:</span> <strong>{data?.facebook}</strong>
       </p>
     </div>
   );

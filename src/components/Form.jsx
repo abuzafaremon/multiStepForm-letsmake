@@ -63,13 +63,21 @@ const Form = () => {
     setPage(0);
     alert("Your form has been submitted, Check your console");
   };
-
   return (
     <div className="container">
       <div className="progress">
         <span
           style={{
-            width: page === 0 ? "33.3%" : page === 1 ? "66.6%" : "100%",
+            width:
+              page === 0
+                ? "0"
+                : Object.keys(errors).length === 0
+                ? "100%"
+                : page === 2 && Object.keys(errors).length <= 2
+                ? "66.6%"
+                : Object.keys(errors).length <= 5
+                ? "33.3%"
+                : "0",
           }}
         ></span>
       </div>
